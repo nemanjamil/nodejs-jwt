@@ -1,15 +1,16 @@
 // Create table on mongoDb
+
 go to c:\mongodb\bin\  
 mongo
 show dbs
 use secure-nodejs
 db.createCollection("Users");
 show collections
--- db.Users.insert({firstName:"miki",lastName:"siki"}); test purpose
--- db.Users.find().pretty(); test purpose
+
 db.users.updateOne({_id : ObjectId("5b6d48083d1a0b19e031ffd5")},{$set : {lastName : "sikasdasdasi"}})
 db.users.updateOne({email : "nemanjamil@gmail.com"},{$set : {lastName : "siki"}})
-
+db.users.insert({firstName:"FirstNameTest",lastName:"LastNameTest"}); 
+db.users.find().pretty();
 
 
 npm shrinkwrap
